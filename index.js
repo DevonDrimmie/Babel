@@ -172,7 +172,7 @@ app.intent('translateInput', (conv, params) => {
         .then(results => {
             console.log("Made it here");
             const output = results[0];
-            conv.ask(output)
+            conv.ask(output + ". Please enter the next phrase for translation.")
         })
         .catch(err => {
             conv.close('Error translating your message, please try again later.')
